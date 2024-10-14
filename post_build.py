@@ -10,6 +10,10 @@ def main():
     for file in os.listdir('dist'):
         os.rename(os.path.join('dist', file), os.path.join('clt_crux_arch', file))
         
+    if not os.path.exists("clt_crux_arch/.nojekyll"):
+        with open("clt_crux_arch/.nojekyll", "w") as f:
+            f.write("")
+            
     os.rename('clt_crux_arch', os.path.join('dist', 'clt_crux_arch'))
     
     logger.info('Moved to clt_crux_arch.')
