@@ -1,0 +1,1 @@
+import"./hoisted.CfuUptTw.js";import"./hoisted.BkrUAyFq.js";document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll("li[data-step]").forEach(t=>{const n=t.getAttribute("data-step"),e=t.querySelector(".step-number div");e&&(e.textContent=n)})});
