@@ -1,0 +1,25 @@
+name: Deploy Next.js App to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build 1  the app
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          artifact_path: dist
+          branch: gh-pages
