@@ -1,0 +1,29 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "WhatsAppBusinessMessageDelivered",
+    "type": "object",
+    "properties": {
+      "type": {
+        "const": "v0.wa.message_delivred"
+      },
+      "uuid": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "timestamp": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "sender": {
+        "type": "string"
+      },
+      "receiver": {
+        "type": "string"
+      },
+      "message_id?": {
+        "type": "string"
+      }
+    },
+    "required": ["type", "timestamp", "sender", "receiver", "message_id?"]
+  }
+  
