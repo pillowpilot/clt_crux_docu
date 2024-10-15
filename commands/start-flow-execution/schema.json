@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "StartFlowExecution",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "v0.conv.start_flow_execution"
+    },
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "user_details": {
+      "type": "string"
+    },
+    "initial_message": {
+      "type": "string"
+    }
+  },
+  "required": ["type", "uuid", "timestamp", "user_details", "initial_message"]
+}
