@@ -6,6 +6,7 @@ summary: |
   Indicates that there is a new message from an agent
 schemaPath: "schema.json"
 ---
+# Agent Answer Generated Event
 
 ## Architecture Diagram
 
