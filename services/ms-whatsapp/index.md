@@ -1,7 +1,7 @@
 ---
 id: ms-whatsapp
 version: 0.0.1
-name: WhatsApp Business API Microservice
+name: WhatsApp Business API
 summary: |
   Microservice that handles all interaction with |
   the official WhatsApp API

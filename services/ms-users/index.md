@@ -1,7 +1,7 @@
 ---
 id: ms-users
 version: 0.0.1
-name: Continental Userbase Enrichment Microservice
+name: Continental Userbase Enrichment
 summary: |
   Microservice responsible for message enrichment |
   with user-related data.
