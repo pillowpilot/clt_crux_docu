@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "OpenTicket",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "v0.conv.open_ticket"
+    },
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "user_details": {
+      "type": "object"
+    },
+    "conversation_id": {
+      "type": "string"
+    },
+    "messages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "timestamp": { "type": "string", "format": "date-time" },
+          "origin": { "enum": ["user", "flow"] },
+          "body": { "type": "string" }
+        }
+      }
+    }
+  },
+  "required": [
+    "type",
+    "uuid",
+    "timestamp",
+    "user_details",
+    "conversation_id",
+    "messages"
+  ]
+}
