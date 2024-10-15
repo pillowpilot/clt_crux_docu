@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "FlowExecutionEnded",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "v0.flows.execution_ended"
+    },
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "flow_execution_id": {
+      "type": "string"
+    },
+    "flow_type": {
+      "enum": ["rigid", "agent-dispatch"]
+    },
+    "conversation_id": {
+      "type": "string"
+    },
+    "is_ticket_required": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "type",
+    "uuid",
+    "timestamp",
+    "flow_execution_id",
+    "flow_type",
+    "conversation_id",
+    "is_ticket_required"
+  ]
+}
