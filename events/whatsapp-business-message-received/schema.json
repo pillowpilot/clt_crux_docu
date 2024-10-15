@@ -1,29 +1,28 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "WhatsAppBusinessMessage",
-    "type": "object",
-    "properties": {
-      "type": {
-        "const": "v0.wa.message_received"
-      },
-      "uuid": {
-        "type": "string",
-        "format": "uuid"
-      },
-      "timestamp": {
-        "type": "string",
-        "format": "date-time"
-      },
-      "sender": {
-        "type": "string"
-      },
-      "receiver": {
-        "type": "string"
-      },
-      "body": {
-        "type": "string"
-      }
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "WhatsAppBusinessMessageReceived",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "v0.wa.message_received"
     },
-    "required": ["type", "timestamp", "sender", "receiver", "body"]
-  }
-  
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "sender": {
+      "type": "string"
+    },
+    "receiver": {
+      "type": "string"
+    },
+    "body": {
+      "type": "string"
+    }
+  },
+  "required": ["type", "timestamp", "sender", "receiver", "body"]
+}

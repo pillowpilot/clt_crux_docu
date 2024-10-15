@@ -3,11 +3,10 @@ id: whatsapp-business-message-received
 name: WhatsApp Business API Message Received
 version: 0.0.1
 summary: |
-  Indicates that there is a new message |
-  from the WhatsApp Business API
+  Indicates that there is a new message from the WhatsApp Business API
 schemaPath: 'schema.json'
 ---
-
+# WhatsApp Business API Message Received Event
 
 ## Architecture Diagram
 
