@@ -1,4 +1,9 @@
 {
     "liveServer.settings.multiRootWorkspaceName": "event-catalog-crux",
-    "liveServer.settings.root": "/dist/"
+    "liveServer.settings.root": "/dist/",
+    "markdownlint.config": {
+        "MD033": {
+            "allowed_elements": ["NodeGraph", "SchemaViewer"]
+        }
+    }
 }
