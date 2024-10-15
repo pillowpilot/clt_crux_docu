@@ -9,6 +9,9 @@ owners:
   - jkuebler
   - jdossantos
   - cgaona
+receives:
+  - id: whatsapp-business-message-received
+    version: 0.0.1
 sends:
   - id: message-received
     version: 0.0.1
