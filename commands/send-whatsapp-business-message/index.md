@@ -6,6 +6,7 @@ summary: |
   Command to send a message through the official WhatsApp API
 schemaPath: "schema.json"
 ---
+# Send WhatsApp Business API Message Command
 
 ## Architecture Diagram
 
