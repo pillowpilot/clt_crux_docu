@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "eventcatalog dev",
-    "build": "eventcatalog build && python3 post_build.py",
+    "build": "eventcatalog build",
     "start": "eventcatalog start",
     "preview": "eventcatalog preview",
     "generate": "eventcatalog generate",
