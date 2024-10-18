@@ -2,27 +2,34 @@
 id: index
 ---
 
-# **EventCatalog**
+# CRUX
 
-Welcome to [EventCatalog](https://www.eventcatalog.dev/).
+## Ubiquitous Language
 
-This open-source project is designed to help you and your teams bring discoverability and clarity to your event-driven architectures (EDA).
+Ubiquitous Language is a cornerstone of Domain-Driven Design (DDD). It's a common language shared by domain experts, developers, and other stakeholders involved in a software project. This shared language ensures that everyone involved in the project is speaking the same language, reducing misunderstandings and improving communication.
 
-To get started you can read the following guides:
+* Identified Customer: An human with an issue, but there is at least one Continental bank account associated to this customer.
 
-* [Getting started with EventCatalog](https://eventcatalog.dev/docs/development/getting-started/introduction)  
-* [Creating domains](https://eventcatalog.dev/docs/development/guides/domains/adding-domains)  
-* [Creating services](https://eventcatalog.dev/docs/development/guides/services/adding-services)  
-* [Creating commands](https://eventcatalog.dev/docs/development/guides/messages/commands/introduction)  
-* [Creating events](https://eventcatalog.dev/docs/development/guides/messages/events/introduction)  
-* [Assigning owners to resources](https://eventcatalog.dev/docs/owners)  
-* [Using components in your pages (Schemas, OpenAPI, etc)](https://eventcatalog.dev/docs/development/components/using-components)  
-* [Deploying and hosting your EventCatalog](https://eventcatalog.dev/docs/development/deployment)
+* Anonymous Customer: An human with an issue. We discriminate between two anonymous customers via some channel details, like phone numbers if the channel is WhatsApp or the sessionid cookie or emails.
 
-### **Join the community**
+* Agent: An **human** responsible for solving issues by messaging with customers.
 
-Got questions about EventCatalog? Feature requests or need support? [Join our community on Discord.](https://discord.gg/3rjaZMmrAm)
+* IA Agent: An **IA** responsible for solving issues by messaging with customers.
 
-### **Enterprise support**
+* Workgroup: Set of agents. Useful for ticket assignment.
 
-Using EventCatalog and needs enterprise support? Work with us, find out what we offer on our [enterprise page](https://eventcatalog.dev/enterprise).
+* Chat: Interactions between the customer and some agents (could be one or several). A chat is a list of messages. Each message has a sender.
+
+* Ticket: A ticket is an attempt to solve an issue. It contains a chat and several attributes, like "agent currently assigned" and "state".
+
+* Channel: Medium through which a message is send/received, like WhatsApp Business API, email, etc.
+
+* Conversation: Document stored at `ms-conv-store`. For **identified** customers, there's only one conversation associated to that customer and all tickets (and therefore all chats) associated with that customer are also contained in the same conversation. For **anonynous** customers, we only store a single ticket per conversation.
+
+In essence, a conversation store *all* interactions between a customer and the system.
+
+Examples of events: automated messages (greetings, goodbyes, off-hours, etc.), IA-generated messages (ex. from a RAG), automatic transfer to an agent, manual transfer between agents, setting a chat to stand by, tagging, etc.
+
+## Object types and Sematic Versioning
+
+Generally every object contains a `type` attribute of the form `vX.Y.Z.M` where `X.Y.Z` is the version of the type and it follows the SemVer format, and `M` is just a string like `chat.comment`. This attribute helps to properly parse and serlialize.
