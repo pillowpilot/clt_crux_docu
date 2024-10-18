@@ -14,19 +14,27 @@
       "type": "string"
     },
     "user_details": {
-      "type": "object"
+      "type": "object",
+      "$comment": "object schema TBD"
     },
-    "messages": {
+    "log": {
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "fallback_text": {
-            "type": "string"
+          "type": {
+            "enum": [
+              "v0.0.1.chat.wa.free_text",
+              "v0.0.1.chat.agent.free_text",
+              "v0.0.1.comment",
+              "v0.0.1.assignment",
+              "v0.0.1.state"
+            ],
+            "$comment": "see ms-conv-store index for more details"
           }
         }
       }
     }
   },
-  "required": ["uuid", "active_channel", "messages"]
+  "required": ["uuid", "active_channel", "source_id", "log"]
 }

@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Comment",
+  "type": "object",
+  "properties": {
+    "type": { "const": "v0.0.1.comment" },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "comment": { "type": "string" },
+    "sender": {
+      "type": "object",
+      "properties": {
+        "agent_id": { "type": "integer" },
+        "display_name": { "type": "string" },
+        "$comment": "Add more fields if any"
+      },
+      "required": ["agent_id", "display_name"]
+    }
+  },
+  "required": ["type", "timestamp", "fallback_text", "sender"]
+}

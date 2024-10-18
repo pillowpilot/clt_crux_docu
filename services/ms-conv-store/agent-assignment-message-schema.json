@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Event",
+  "type": "object",
+  "properties": {
+    "type": { "const": "v0.0.1.assigment" },
+    "new_agent": {
+      "type": "object",
+      "properties": {
+        "agent_id": { "type": "integer" },
+        "display_name": { "type": "string" }
+      },
+      "required": ["agent_id", "display_name"]
+    },
+    "authorized_by": {
+      "type": "object",
+      "properties": {
+        "agent_id": { "type": "integer" },
+        "display_name": { "type": "string" }
+      },
+      "required": ["agent_id", "display_name"]
+    }
+  },
+  "required": ["type", "new_agent", "authorized_by"]
+}
