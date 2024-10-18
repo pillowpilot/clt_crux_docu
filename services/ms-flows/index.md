@@ -13,4 +13,8 @@ sends:
 repository:
   language: Python
   url: https://gitea.clt.com.py/CLT/ms-clt-chat-flows
+badges:
+  - content: Deprecated
+    backgroundColor: red
+    textColor: red
 ---
