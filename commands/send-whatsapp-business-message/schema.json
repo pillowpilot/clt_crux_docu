@@ -4,7 +4,7 @@
   "type": "object",
   "properties": {
     "type": {
-      "const": "v0.users.send_whatsapp_business_message"
+      "const": "v0.0.1.users.send_whatsapp_business_message"
     },
     "uuid": {
       "type": "string",
