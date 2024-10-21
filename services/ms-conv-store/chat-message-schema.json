@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ChatMessage",
+  "type": "object",
+  "properties": {
+    "type": { "const": "v0.0.1.chat.<message_type>" },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "fallback_text": { "type": "string" },
+    "sender": {
+      "type": "object",
+      "properties": {
+        "display_name": { "type": "string" },
+        "$comment": "TODO other fields depending of <message_type>"
+      },
+      "$comment": "other fields depending of <message_type>",
+      "required": ["display_name"]
+    }
+  },
+  "required": ["type", "fallback_text", "sender"]
+}
