@@ -82,15 +82,15 @@ List of source id procedures by channel:
 
 ### Header
 
-- Conversation Id: Unique string that identifies a conversation. It's set by `ms-conv-store` during its construction.
+* Conversation Id: Unique string that identifies a conversation. It's set by `ms-conv-store` during its construction.
 
-- Customer Id: Unique string that identifies a customer. For anonymous customers, this attribute is undefined.
+* Customer Id: Unique string that identifies a customer. For anonymous customers, this attribute is undefined.
 
-- Source Id: Unique string that identifies the source of messages for anonymous customers. For example, if the channel is WhatsApp, it would be a string with the phone number.
+* Source Id: Unique string that identifies the source of messages for anonymous customers. For example, if the channel is WhatsApp, it would be a string with the phone number.
 
-- Active channel: Channel through which the system will send its messages **by default**. It's set during the construction of a new conversation.
+* Active channel: Channel through which the system will send its messages **by default**. It's set during the construction of a new conversation.
 
-- State: `open` or `closed`.
+* State: `open` or `closed`.
 
 ### Log (ordered by timestamp)
 
@@ -164,17 +164,17 @@ If `type` equlas `v0.0.1.comment`, the entry refers to a comment done by an agen
 
 <SchemaViewer id="comment-message-schema" file="comment-message-schema.json" title="Comment Message Schema" maxHeight="500" />
 
-#### State Change
+#### Ticket State Change
 
-If `type` equals `v0.0.1.state`, the entry referers to any change on its state (pending, open, stand by, closed).
+The entry referers to any change on the ticket state (pending, open, stand by, closed).
 
-- Pending: A chat initial state. Indicates that the chat is assigned to some agent, but he or she is yet to answer to the customer.
+* Pending: A ticket initial state is `pending`. Indicates that the chat is assigned to some agent, but he or she is yet to answer to the customer.
 
-- Open: After an agent sends an answer to the customer, the chat state is set to open.
+* Open: After an agent sends an answer to the customer, the state is set to `open`.
 
-- Stand By: An agent could change the state of the chat to stand by.
+* Stand By: An agent could manually change the state of the chat to `standby`.
 
-- Closed: An agent could change the state of the chat to stand by.
+* Closed: An agent could manually change the state of the chat to `closed`.
 
 TODO Add state diagram
 
