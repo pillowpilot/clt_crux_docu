@@ -125,9 +125,9 @@ The following schema is used for WhatsApp Business messages:
 
 #### Comments (added by agents)
 
-If `type` equlas `v0.0.1.comment`, the entry refers to a comment done by an agent. This entry is analogous to a message but it's not send or displayed to the customer.
+This entry is analogous to a message but it's not send or displayed to the customer.
 
-<SchemaViewer id="comment-message-schema" file="comment-message-schema.json" title="Comment Message Schema" maxHeight="500" />
+<SchemaViewer id="comment-message-schema" file="comment-message-schema.json" />
 
 #### Ticket State Change
 
@@ -158,14 +158,14 @@ Closed --> [*]
 @enduml
 ```
 
-<SchemaViewer id="3" file="state-change-message-schema.json" title="Conversation State Change Message Schema" maxHeight="500" />
+<SchemaViewer id="3" file="state-change-message-schema.json" />
 
 #### Agent Assignment
 
 If `type` equals `v0.assignment`, the entry refers to a new assigment.
 
-<SchemaViewer id="2" file="agent-assignment-message-schema.json" title="Agent Assignment Message Schema" maxHeight="500" />
+<SchemaViewer id="2" file="agent-assignment-message-schema.json" />
 
-### Schema
+### Conversation Document Schema
 
-<SchemaViewer id="1" file="schema.json" title="Conversation Schema" maxHeight="500" />
+<SchemaViewer id="1" file="schema.json"/>
