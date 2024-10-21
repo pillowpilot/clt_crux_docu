@@ -76,6 +76,8 @@ List of source id procedures by channel:
 * WhatsApp Business API: `"wa.<phone_number>"`
 * Email: `"email.<email_address>"`
 * Agent: `"agent.<agent_id>"`
+* Mobile: `mobile.<>` TODO
+* Website: `website.<>`  TODO
 * IA Agent: `"aiagent.<>"` TODO
 
 ## Structure of a Conversation
