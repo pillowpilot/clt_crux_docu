@@ -18,7 +18,7 @@ schemaPath: "schema.json"
 
 ```json title="Message Example"
 {
-  "type": "v0.0.1.users.send_whatsapp_business_message",
+  "type": "v0.0.1.users.send_whatsapp_business_message.text",
   "uuid": "01234567-89ab-cdef-0123-456789abcdef",
   "timestamp": "2024-10-14T19:34:00Z",
   "sender": "+521234567891",
