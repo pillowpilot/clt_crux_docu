@@ -18,7 +18,7 @@ schemaPath: 'schema.json'
 
 ```json title="Text Message Example"
 {
-  "type": "v0.wa.message_received.text",  
+  "type": "v0.0.1.wa.message_received.text",  
   "uuid": "987fedcba-4321-5678-abcd-ef0123456789",
   "timestamp": "2024-10-14T18:23:00Z",
   "sender": "+15551234567",  

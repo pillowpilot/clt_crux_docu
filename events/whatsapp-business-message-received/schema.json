@@ -4,7 +4,7 @@
   "type": "object",
   "properties": {
     "type": {
-      "const": "v0.wa.message_received"
+      "const": "v0.0.1.wa.message_received"
     },
     "uuid": {
       "type": "string",
