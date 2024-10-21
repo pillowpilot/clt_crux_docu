@@ -67,7 +67,7 @@ A conversation has an `active channel` attribute always set. The `active channel
 
 ### Message dispatching
 
-There must be a well-defined systemwide procedure to generate a message source id, which must encode **enough information** to dispatch messages to conversations. A proposal is to encode information from the channel (ie. WhatsApp Business) and its *source* within that channel (ie. an phone number), so a WhatsApp Business message from "+595 991 123 456" would become "wa.+595991123456" and an email from "customer@example.com" would be "email.customer@example.com". However with the current project scope, the *source* within each channel seems enough.
+There must be a well-defined systemwide procedure to generate a message source id, which must encode **enough information** to dispatch messages to conversations. A proposal is to encode information from the channel (ie. WhatsApp Business) and its *source* within that channel (ie. an phone number), so a WhatsApp Business message from `+595 991 123 456` would become `wa.+595991123456` and an email from `customer@example.com` would be `email.customer@example.com`. However with the current project scope, the *source* within each channel seems enough.
 
 An important observation is that the only operation supported for source id is *comparison* (`==` and `!=`). A microservice must not parse a source id and use its components for bussines logic.
 
