@@ -4,7 +4,7 @@
   "type": "object",
   "properties": {
     "type": {
-      "const": "v0.users.message_received"
+      "const": "v0.0.1.users.message_received"
     },
     "uuid": {
       "type": "string",
@@ -15,7 +15,11 @@
       "format": "date-time"
     },
     "sender": {
-      "type": "string"
+      "type": "object",
+      "properties": {
+        "display_name": { "type": "string" }
+      },
+      "required": ["display_name"]
     },
     "receiver": {
       "type": "string"
@@ -27,13 +31,15 @@
       "type": "string"
     },
     "channel": {
-      "enum": ["whatsapp-business", "mobile", "TBD..."]
+      "enum": ["whatsapp-business", "mobile", "website", "email"]
     },
     "channel_details": {
-      "type": "object"
+      "type": "object",
+      "$comment": "More fields depeding on the channel"
     },
     "user_details": {
-      "type": "object"
+      "type": "object",
+      "$comment": "TODO"
     }
   },
   "required": [
