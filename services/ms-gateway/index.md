@@ -1,9 +1,9 @@
 ---
-id: ms-users
+id: ms-gateway
 version: 0.0.1
-name: Continental Userbase Enrichment
+name: Continental Gateway
 summary: |
-  Microservice responsible for message enrichment with user-related data.
+  Microservice responsible with every interaction with Continental Bank. It handles: message enrichment with user-related data, exposure of the official website and the mobile app as channels.
 owners:
   - jkuebler
   - jdossantos
