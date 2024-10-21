@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Event",
+  "type": "object",
+  "properties": {
+    "type": { "const": "v0.0.1.state" },
+    "new_state": { "enum": ["pending", "open", "standby", "closed"] },
+    "authorized_by": {
+      "type": "object",
+      "properties": {
+        "agent_id": { "type": "integer" },
+        "display_name": { "type": "string" }
+      },
+      "required": ["agent_id", "display_name"]
+    }
+  },
+  "required": ["type", "new_state", "authorized_by"]
+}

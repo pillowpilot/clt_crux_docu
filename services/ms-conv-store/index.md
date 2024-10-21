@@ -141,27 +141,7 @@ Automated messages, like greetings and farewells, are also included in this cate
 
 #### message_type is `wa.free_text`
 
-```json
-{
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "ChatMessage",
-  "type": "object",
-  "properties": {
-    "type": { "const": "v0.0.1.chat.wa.free_text" },
-    "timestamp": { "type": "string", "format": "date-time" },
-    "fallback_text": { "type": "string" },
-    "sender": {
-      "type": "object",
-      "properties": {
-        "display_name": { "type": "string" },
-        "phone_number": { "type": "string" }
-      },
-      "required": ["display_name", "phone_number"]
-    }
-  },
-  "required": ["type", "timestamp", "fallback_text", "sender"]
-}
-```
+<SchemaViewer id="4" file="whatsapp-business-message-schema.json" title="WhatsApp Business Message Schema" maxHeight="500" />
 
 #### Comments (added by agents)
 
@@ -198,26 +178,7 @@ Closed --> [*]
 @enduml
 ```
 
-```json
-{
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Event",
-  "type": "object",
-  "properties": {
-    "type": { "const": "v0.0.1.state" },
-    "new_state": { "enum": ["pending", "open", "standby", "closed"] },
-    "authorized_by": {
-      "type": "object",
-      "properties": {
-        "agent_id": { "type": "integer" },
-        "display_name": { "type": "string" }
-      },
-      "required": ["agent_id", "display_name"]
-    }
-  },
-  "required": ["type", "new_state", "authorized_by"]
-}
-```
+<SchemaViewer id="3" file="state-change-message-schema.json" title="Conversation State Change Message Schema" maxHeight="500" />
 
 #### Agent Assignment
 

@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ChatMessage",
+  "type": "object",
+  "properties": {
+    "type": { "const": "v0.0.1.chat.wa.free_text" },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "fallback_text": { "type": "string" },
+    "sender": {
+      "type": "object",
+      "properties": {
+        "display_name": { "type": "string" },
+        "phone_number": { "type": "string" }
+      },
+      "required": ["display_name", "phone_number"]
+    }
+  },
+  "required": ["type", "timestamp", "fallback_text", "sender"]
+}
