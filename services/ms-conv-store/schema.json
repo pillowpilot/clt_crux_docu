@@ -24,8 +24,8 @@
         "properties": {
           "type": {
             "enum": [
-              "v0.0.1.chat.wa.free_text",
-              "v0.0.1.chat.agent.free_text",
+              "v0.0.1.chat.wa.text",
+              "v0.0.1.chat.agent.text",
               "v0.0.1.comment",
               "v0.0.1.assignment",
               "v0.0.1.state"
