@@ -20,9 +20,12 @@
     "receiver": {
       "type": "string"
     },
+    "message_id": {
+      "type": "string"
+    },
     "body": {
       "type": "string"
     }
   },
-  "required": ["type", "timestamp", "sender", "receiver", "body"]
+  "required": ["type", "timestamp", "sender", "receiver", "message_id", "body"]
 }
