@@ -71,6 +71,13 @@ There must be a well-defined systemwide procedure to generate a message source i
 
 An important observation is that the only operation supported for source id is *comparison* (`==` and `!=`). A microservice must not parse a source id and use its components for bussines logic.
 
+List of source id procedures by channel:
+
+* WhatsApp Business API: `"wa.<phone_number>"`
+* Email: `"email.<email_address>"`
+* Agent: `"agent.<agent_id>"`
+* IA Agent: `"aiagent.<>"` TODO
+
 ## Structure of a Conversation
 
 ### Header
