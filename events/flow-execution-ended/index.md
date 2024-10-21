@@ -5,6 +5,10 @@ version: 0.0.1
 summary: |
   Indicates that some flow has finished.
 schemaPath: "schema.json"
+badges:
+  - content: Deprecated
+    backgroundColor: red
+    textColor: red
 ---
 # Flow Execution Ended Event
 

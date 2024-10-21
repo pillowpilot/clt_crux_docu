@@ -5,6 +5,10 @@ version: 0.0.1
 summary: |
   Indicates that there is a new message from a flow
 schemaPath: "schema.json"
+badges:
+  - content: Deprecated
+    backgroundColor: red
+    textColor: red
 ---
 # Flow Answer Generated Event
 
