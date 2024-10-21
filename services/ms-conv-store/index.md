@@ -98,32 +98,20 @@ In the conversation there will be a log of relevant events (messages, agent tran
 
 Each entry of the log must be an object with a `type` field indicating the type of entry.
 
-If `type` equals `v0.0.1.chat.<message_type>`, the entry referers to a message send by the customer or the system (agent or flow). Its schema is the following:
+The structure of the `type` field is the following: `vX.Y.Z.<event_type>.<sub_event_type>` where `<event_type>` could be:
 
-```json
-{
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "ChatMessage",
-  "type": "object",
-  "properties": {
-    "type": { "const": "v0.0.1.chat.<message_type>" },
-    "timestamp": { "type": "string", "format": "date-time" },
-    "fallback_text": { "type": "string" },
-    "sender": {
-      "type": "object",
-      "properties": {
-        "display_name": { "type": "string" },
-        "$comment": "TODO other fields depending of <message_type>"
-      },
-      "$comment": "other fields depending of <message_type>",
-      "required": ["display_name"]
-    }
-  },
-  "required": ["type", "fallback_text", "sender"]
-}
-```
+* `chat`: each `chat` event correspond to a message send by the customer or an agent,
+* `comment`: comments added by agents,
+* `state`: update the `state` attribute of the corresponding ticket,
+* `assignment`: update the agent assigned.
 
-There are two main properties for message type entries: a `fallback text` and `display name` for the sender. Even thought a message may contain serveral pieces of string or only an image, a **descriptive** fallback text is required. Analogously, a **descriptive** display name for the sender is also required, ex. "Anon. User (+595 981 123 456)" or "Greetings AutoMessage".
+#### Chat Events
+
+`<event_type>` equals `chat.<message_type>`. The schema is the following:
+
+<SchemaViewer id="5" file="chat-message-schema.json" />
+
+There are two main properties for message type entries: a `fallback_text` and `display_name` for the sender. Even thought a message may contain serveral pieces of string or only an image, a **descriptive** fallback text is required. Analogously, a **descriptive** display name for the sender is also required, ex. "Anon. User (+595 981 123 456)" or "Greetings AutoMessage".
 
 There could be some other fields depending on the actual value of `<message_type>`. Ex. `header`, `body`, and `caption` in the case of a WhatsApp template.
 
