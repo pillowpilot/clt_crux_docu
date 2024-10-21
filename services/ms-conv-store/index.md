@@ -117,34 +117,11 @@ There could be some other fields depending on the actual value of `<message_type
 
 Automated messages, like greetings and farewells, are also included in this category.
 
-#### message_type is `agent.free_text`
+The following schema is used for agent messages:
+<SchemaViewer id="6" file="chat-agent-message-schema.json" />
 
-```json
-{
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "ChatMessage",
-  "type": "object",
-  "properties": {
-    "type": { "const": "v0.0.1.chat.agent.free_text" },
-    "timestamp": { "type": "string", "format": "date-time" },
-    "fallback_text": { "type": "string" },
-    "sender": {
-      "type": "object",
-      "properties": {
-        "display_name": { "type": "string" },
-        "agent_id": { "type": "integer" },
-        "$comment": "add more fields if any"
-      },
-      "required": ["display_name"]
-    }
-  },
-  "required": ["type", "timestamp", "fallback_text", "sender"]
-}
-```
-
-#### message_type is `wa.free_text`
-
-<SchemaViewer id="4" file="whatsapp-business-message-schema.json" title="WhatsApp Business Message Schema" maxHeight="500" />
+The following schema is used for WhatsApp Business messages:
+<SchemaViewer id="4" file="whatsapp-business-message-schema.json" />
 
 #### Comments (added by agents)
 
