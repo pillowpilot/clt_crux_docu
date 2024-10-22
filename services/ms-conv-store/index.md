@@ -14,7 +14,17 @@ receives:
     version: 0.0.1
   - id: agent-answer-generated
     version: 0.0.1
+  - id: ticket-opened
+    version: 0.0.1
   - id: ticket-closed
+    version: 0.0.1
+  - id: ticket-state-changed
+    version: 0.0.1
+  - id: ticket-comment-added
+    version: 0.0.1
+  - id: agent-assigned
+    version: 0.0.1
+  - id: get-conversation
     version: 0.0.1
 sends:
   - id: send-whatsapp-business-message
@@ -22,6 +32,8 @@ sends:
   - id: message_added
     version: 0.0.1
   - id: open-ticket
+    version: 0.0.1
+  - id: conversation-document
     version: 0.0.1
 repository:
   language: TDB
