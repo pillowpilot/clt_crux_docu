@@ -4,7 +4,7 @@
   "type": "object",
   "properties": {
     "type": {
-      "const": "v0.agents.ticket_closed"
+      "const": "v0.0.1.agents.ticket_closed"
     },
     "uuid": {
       "type": "string",
@@ -19,7 +19,13 @@
     },
     "conversation_id": {
       "type": "string"
+    },
+    "authorized_by": {
+      "type": "object",
+      "properties": {
+        "agent_id": { "type": "string" }
+      }
     }
   },
-  "required": ["type", "uuid", "timestamp", "ticket_id", "conversation_id"]
+  "required": ["type", "uuid", "timestamp", "ticket_id", "conversation_id", "authorized_by"]
 }
