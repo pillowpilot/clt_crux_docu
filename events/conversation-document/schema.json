@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ConversationDocument",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "v0.0.1.conv.conversation_document"
+    },
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "conversation": {
+      "type": "object"
+    }
+  },
+  "required": ["type", "uuid", "timestamp", "conversation"]
+}
