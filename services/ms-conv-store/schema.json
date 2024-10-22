@@ -7,6 +7,9 @@
       "type": "string",
       "format": "uuid"
     },
+    "codigo_cliente": {
+      "type": "string"
+    },
     "active_channel": {
       "enum": ["whatsapp-business", "mobile", "website", "email"]
     },

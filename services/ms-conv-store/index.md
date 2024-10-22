@@ -41,7 +41,7 @@ repository:
 
 ## Semantics of a Conversation
 
-A conversation stores all events related to a customer and the system. In particular, it stores all messages between a customer and the system. Each message is associated with a channel, which is the medium through which the message was sent.
+A conversation stores all events related to a customer (identified or anonymous) and the system. In particular, it stores all messages between a customer and the system. Each message is associated with a channel, which is the medium through which the message was sent.
 
 The structure of an event will continue to change in the future, however its storage must comply with the following properties:
 
@@ -65,7 +65,11 @@ A conversation has an `active channel` attribute always set. The `active channel
 
 ## Main Decision Making Processes
 
-### Message dispatching
+### Message dispatching for identified customers
+
+Inherited from the banking core, there is a `codigo_cliente` string field for every conversation associated to an identified customer.
+
+### Message dispatching for anonymous customers
 
 There must be a well-defined systemwide procedure to generate a message source id, which must encode **enough information** to dispatch messages to conversations. A proposal is to encode information from the channel (ie. WhatsApp Business) and its *source* within that channel (ie. an phone number), so a WhatsApp Business message from `+595 991 123 456` would become `wa.+595991123456` and an email from `customer@example.com` would be `email.customer@example.com`. However with the current project scope, the *source* within each channel seems enough.
 
@@ -86,7 +90,7 @@ List of source id procedures by channel:
 
 * Conversation Id: Unique string that identifies a conversation. It's set by `ms-conv-store` during its construction.
 
-* Customer Id: Unique string that identifies a customer. For anonymous customers, this attribute is undefined.
+* Customer Id (`codigo_cliente`): Unique string that identifies a customer. For anonymous customers, this attribute is undefined.
 
 * Source Id: Unique string that identifies the source of messages for anonymous customers. For example, if the channel is WhatsApp, it would be a string with the phone number.
 
