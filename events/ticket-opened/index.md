@@ -18,7 +18,7 @@ schemaPath: "schema.json"
 
 ```json title="Message Example"
 {
-  "type": "v0.agents.ticket_opened",
+  "type": "v0.0.1.agents.ticket_opened",
   "uuid": "fedcba09-8765-4321-abcd-ef0123456789",
   "timestamp": "2024-10-15 17:25:00Z",
   "ticket_id": "TCK-12345",  // Replace with actual ticket ID
