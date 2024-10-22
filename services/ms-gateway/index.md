@@ -19,3 +19,10 @@ repository:
   url: https://gitea.clt.com.py/CLT/ms-clt-chat-gateway
 ---
 
+# Continental Bank Gateway Microservice
+
+## Main Responsabilities
+
+* Enrich incomming messages with user-related data (if any).
+* Receive and send messages to the official website widget.
+* Receive and send messages to the official mobile app.
