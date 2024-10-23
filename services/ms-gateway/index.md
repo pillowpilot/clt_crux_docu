@@ -11,6 +11,10 @@ owners:
 receives:
   - id: whatsapp-business-message-received
     version: 0.0.1
+  - id: send-website-message
+    version: 0.0.1
+  - id: send-mobile-message
+    versio: 0.0.1
 sends:
   - id: message-received
     version: 0.0.1
