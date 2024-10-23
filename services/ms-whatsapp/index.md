@@ -9,6 +9,9 @@ owners:
   - lbarreiro
   - jdossantos
   - cgaona
+receives:
+  - id: send-whatsapp-business-message
+    version: 0.0.1
 sends:
   - id: whatsapp-business-message-received
     version: 0.0.1
