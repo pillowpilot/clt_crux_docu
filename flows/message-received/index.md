@@ -5,14 +5,14 @@ version: 0.0.1
 summary: Business flow for handling a new message through WhatsApp Business API
 steps:
     - id: "customer_sends_message_via_whatsapp"
-      title: Customer sends message via WhatsApp
+      title: Customer sends message via WhatsApp 2
       next_step: 
-        id: "ms-whatsapp"
+        id: "ms-whatsapp444"
 
-    - id: "ms-whatsapp"
+    - id: "ms-whatsapp444" # Dentro del flujo
       title: ms-whatsapp
       service:
-        id: "ms-whatsapp"
+        id: "ms-whatsapp" # Id del microservicio /service/ms-whatsapp/index.md : id
         version: 0.0.1
       next_step:
         id: "whatsapp-business-message-received"
