@@ -39,7 +39,11 @@
     },
     "user_details": {
       "type": "object",
-      "$comment": "TODO"
+      "properties": {
+        "codigo_cliente": {
+          "type": "string"
+        }
+      }
     }
   },
   "required": [
