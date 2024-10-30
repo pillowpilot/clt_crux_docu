@@ -8,7 +8,7 @@ owners:
   - jdossantos
   - cgaona
 receives:
-  - id: message_added
+  - id: message-added
     version: 0.0.1
   - id: open-ticket
     version: 0.0.1
