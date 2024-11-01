@@ -19,30 +19,14 @@ schemaPath: "schema.json"
 
 ```json title="Message Example"
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "AgentAssignedToTicket",
-  "type": "object",
-  "properties": {
-    "type": {
-      "const": "v0.0.1.agents.agent_assigned"
-    },
-    "uuid": "b4f78e8c-40be-429b-83d2-e1d12a829841",
-    "timestamp": "2024-10-22T18:23:00Z",
-    "ticket_id": "TCK-12345",
-    "agent_assigned": {
-      "agent_id": "USR-00002" // Agent ID to whom the ticket is assigned
-    },
-    "authorized_by": {
-      "agent_id": "USR-00001" // Agent ID who authorized the assignment
-    }
+  "uuid": "f7800098-e089-4989-aea4-ab97ef071452",
+  "timestamp": "2024-10-31T23:51:22Z",
+  "ticket_id": "TCK-12345",
+  "agent_assigned": {
+    "agent_id": "AGT-98765"
   },
-  "required": [
-    "type",
-    "uuid",
-    "timestamp",
-    "ticket_id",
-    "agent_assigned",
-    "authorized_by"
-  ]
+  "authorized_by": {
+    "agent_id": "AGT-00001"
+  }
 }
 ```

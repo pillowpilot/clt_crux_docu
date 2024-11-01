@@ -1,40 +1,35 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "AgentAnswerGenerated",
-    "type": "object",
-    "properties": {
-      "type": {
-        "const": "v0.0.1.agent.answer_generated.text"
-      },
-      "uuid": {
-        "type": "string",
-        "format": "uuid"
-      },
-      "timestamp": {
-        "type": "string",
-        "format": "date-time"
-      },
-      "agent_id": {
-        "type": "string"
-      },
-      "agent_details": {
-        "type": "object"
-      },
-      "conversation_id": {
-        "type": "string"
-      },
-      "body": {
-        "type": "string"
-      }
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AgentAnswerGenerated",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
     },
-    "required": [
-      "type",
-      "uuid",
-      "timestamp",
-      "agent_id",
-      "agent_details",
-      "conversation_id",
-      "body"
-    ]
-  }
-  
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "agent_id": {
+      "type": "string"
+    },
+    "agent_details": {
+      "type": "object"
+    },
+    "conversation_id": {
+      "type": "string"
+    },
+    "body": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "uuid",
+    "timestamp",
+    "agent_id",
+    "agent_details",
+    "conversation_id",
+    "body"
+  ]
+}

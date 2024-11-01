@@ -3,9 +3,6 @@
   "title": "IAAgentAnswerGenerated",
   "type": "object",
   "properties": {
-    "type": {
-      "const": "v0.0.1.agent.ai_answer_generated.text"
-    },
     "uuid": {
       "type": "string",
       "format": "uuid"
@@ -25,7 +22,6 @@
     }
   },
   "required": [
-    "type",
     "uuid",
     "timestamp",
     "agent_details",

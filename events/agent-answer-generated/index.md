@@ -18,7 +18,6 @@ schemaPath: "schema.json"
 
 ```json title="Message Example"
 {
-  "type": "v0.0.1.agent.answer_generated.text",
   "uuid": "01234567-89ab-cdef-0123-456789abcdef",
   "timestamp": "2024-10-15 14:57:00Z",
   "agent_id": "jdoe",
