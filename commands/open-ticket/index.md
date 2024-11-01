@@ -5,6 +5,10 @@ version: 0.0.1
 summary: |
   Command to open a new ticket
 schemaPath: "schema.json"
+badges:
+  - content: Deprecated
+    backgroundColor: red
+    textColor: red
 ---
 # Open Ticket Command
 
