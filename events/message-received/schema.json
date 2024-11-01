@@ -3,9 +3,6 @@
   "title": "Message",
   "type": "object",
   "properties": {
-    "type": {
-      "const": "v0.0.1.users.message_received"
-    },
     "uuid": {
       "type": "string",
       "format": "uuid"
@@ -47,7 +44,6 @@
     }
   },
   "required": [
-    "type",
     "timestamp",
     "sender",
     "receiver",
