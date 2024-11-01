@@ -3,9 +3,6 @@
   "title": "WhatsAppBusinessMessageReceived",
   "type": "object",
   "properties": {
-    "type": {
-      "const": "v0.0.1.wa.message_received"
-    },
     "uuid": {
       "type": "string",
       "format": "uuid"
@@ -27,5 +24,5 @@
       "type": "string"
     }
   },
-  "required": ["type", "timestamp", "sender", "receiver", "message_id", "body"]
+  "required": ["timestamp", "sender", "receiver", "message_id", "body"]
 }
