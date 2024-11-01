@@ -3,9 +3,6 @@
   "title": "TicketOpened",
   "type": "object",
   "properties": {
-    "type": {
-      "const": "v0.0.1.agents.ticket_opened"
-    },
     "uuid": {
       "type": "string",
       "format": "uuid"
@@ -21,5 +18,5 @@
       "type": "string"
     }
   },
-  "required": ["type", "uuid", "timestamp", "ticket_id", "conversation_id"]
+  "required": ["uuid", "timestamp", "ticket_id", "conversation_id"]
 }
