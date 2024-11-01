@@ -3,9 +3,6 @@
   "title": "Send WhatsApp Message",
   "type": "object",
   "properties": {
-    "type": {
-      "const": "v0.0.1.users.send_whatsapp_business_message.text"
-    },
     "uuid": {
       "type": "string",
       "format": "uuid"
@@ -24,5 +21,5 @@
       "type": "string"
     }
   },
-  "required": ["type", "timestamp", "sender", "receiver", "body"]
+  "required": ["uuid", "timestamp", "sender", "receiver", "body"]
 }
