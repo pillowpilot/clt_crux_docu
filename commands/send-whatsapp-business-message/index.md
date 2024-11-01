@@ -5,6 +5,10 @@ version: 0.0.1
 summary: |
   Command to send a message through the official WhatsApp API
 schemaPath: "schema.json"
+badges:
+  - content: Deprecated
+    backgroundColor: red
+    textColor: red
 ---
 # Send WhatsApp Business API Message Command
 
