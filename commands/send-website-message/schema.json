@@ -3,9 +3,6 @@
     "title": "Send Website Widget Message",
     "type": "object",
     "properties": {
-      "type": {
-        "const": "v0.0.1.conv.send_website_message.text"
-      },
       "uuid": {
         "type": "string",
         "format": "uuid"
@@ -24,6 +21,6 @@
         "type": "string"
       }
     },
-    "required": ["type", "timestamp", "sender", "receiver", "body"]
+    "required": ["uuid", "timestamp", "sender", "receiver", "body"]
   }
   
