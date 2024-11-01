@@ -6,6 +6,7 @@ summary: |
   Query all data related to a conversation
 schemaPath: "schema.json"
 ---
+
 # Get Conversation Query
 
 ## Architecture Diagram
@@ -14,26 +15,26 @@ schemaPath: "schema.json"
 
 <SchemaViewer file="schema.json" />
 
-## Example
+`start_timestamp` and `end_timestamp` encode the period to use while filtering the log. They are analogous to pagination. We have that `start_timestamp` must be lower or equal to `end_timestamp`, for example `start_timestamp` could be `2024-10-20T23:15:00Z` (October, 20th) and `end_timestamp` could be `2024-10-31T23:15:00Z` (October, 31th).
 
-```json title="Message Example"
+If `start_timestamp` is not present, it means that the request includes everything from the begining of the log. Analogously, if `end_timestamp` is not present, include everything until the end. Naturally, if any of them is present, include everything.
+
+## Examples
+
+```json title="From the 10th to the 20th"
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "GetConversation",
-  "type": "object",
-  "properties": {
-    "type": {
-      "const": "v0.agents.get_conversation"
-    },
-    "uuid": "b4f78e8c-40be-429b-83d2-e1d12a829841",
-    "timestamp": "2024-10-22T18:23:00Z",
-    "conversation_id": "CONV-12345" // Replace with the actual conversation ID
-  },
-  "required": [
-    "type",
-    "uuid",
-    "timestamp",
-    "conversation_id"
-  ]
+  "uuid": "b4f78e8c-40be-429b-83d2-e1d12a829841",
+  "timestamp": "2024-10-31T23:15:00Z",
+  "conversation_id": "conversation_12345",
+  "start_timestamp": "2024-10-10T22:00:00Z", // October, 10th
+  "end_timestamp": "2024-10-20T22:00:00Z" // October, 20th
+}
+```
+
+```json title="Include everything"
+{
+  "uuid": "b4f78e8c-40be-429b-83d2-e1d12a829841",
+  "timestamp": "2024-10-31T23:15:00Z",
+  "conversation_id": "conversation_12345",
 }
 ```
