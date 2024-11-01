@@ -3,9 +3,6 @@
   "title": "ConversationDocument",
   "type": "object",
   "properties": {
-    "type": {
-      "const": "v0.0.1.conv.conversation_document"
-    },
     "uuid": {
       "type": "string",
       "format": "uuid"
@@ -18,5 +15,5 @@
       "type": "object"
     }
   },
-  "required": ["type", "uuid", "timestamp", "conversation"]
+  "required": ["uuid", "timestamp", "conversation"]
 }
