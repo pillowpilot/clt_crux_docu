@@ -30,6 +30,9 @@ In essence, a conversation store *all* interactions between a customer and the s
 
 Examples of events: automated messages (greetings, goodbyes, off-hours, etc.), IA-generated messages (ex. from a RAG), automatic transfer to an agent, manual transfer between agents, setting a chat to stand by, tagging, etc.
 
-## Object types and Sematic Versioning
+## Exchanges and Queue Strategy
 
-Generally every object contains a `type` attribute of the form `vX.Y.Z.M` where `X.Y.Z` is the version of the type and it follows the SemVer format, and `M` is just a string like `chat.comment`. This attribute helps to properly parse and serlialize.
+We are using RabbitMQ. To simplify every microservice, we are implementing a one-to-one correspondence between a queue and a message type. For example, the message `Open Ticket` will have its own queue, only messages of that type will be enqueue there and only there.
+
+Initially, every microservice will publlish its messages in the default exchange and consume from the queues relevant to its functionality.
+
