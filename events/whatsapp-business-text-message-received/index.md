@@ -1,6 +1,6 @@
 ---
 id: whatsapp-business-text-message-received
-name: WhatsApp Business API Message Received
+name: WhatsApp Business API Text Message Received
 version: 0.0.1
 summary: |
   Indicates that there is a new message from the WhatsApp Business API
