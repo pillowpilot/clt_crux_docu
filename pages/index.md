@@ -35,4 +35,3 @@ Examples of events: automated messages (greetings, goodbyes, off-hours, etc.), I
 We are using RabbitMQ. To simplify every microservice, we are implementing a one-to-one correspondence between a queue and a message type. For example, the message `Open Ticket` will have its own queue, only messages of that type will be enqueue there and only there.
 
 Initially, every microservice will publlish its messages in the default exchange and consume from the queues relevant to its functionality.
-
