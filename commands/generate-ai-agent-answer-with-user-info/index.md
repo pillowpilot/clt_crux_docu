@@ -1,6 +1,6 @@
 ---
 id: generate-ai-agent-answer-with-user-info
-name: Generate AI Agent Answer With Customer Information
+name: Generate AI Agent Answer With User Information
 version: 0.0.1
 summary: |
   Command to send a query (with context and customer information) to an AI agent.
