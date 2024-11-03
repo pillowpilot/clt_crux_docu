@@ -89,7 +89,7 @@ steps:
         id: "open-ticket"
         version: 0.0.1
       next_step:
-        id: "ms-agent"
+        id: "ms-agents"
 
     - id: "ms-agents"
       title: "ms-agents"
@@ -136,7 +136,7 @@ steps:
         id: "conversation-document"
         version: 0.0.1
       next_step:
-        id: "ms-agent"
+        id: "ms-agents"
 
     - id: "agent-answer-generated"
       title: "Agent Answer Generated"
