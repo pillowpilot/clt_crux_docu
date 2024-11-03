@@ -11,6 +11,10 @@ schemaPath: "schema.json"
 
 Encodes the event when **Text Message** arrives via WhatsApp Business. `ms-gateway` already enriched the event.
 
+## Queue and Class name
+
+Use `WABATextMsgWithUserInfo`
+
 ## Architecture Diagram
 
 <NodeGraph />
