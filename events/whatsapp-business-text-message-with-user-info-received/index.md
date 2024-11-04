@@ -30,9 +30,9 @@ Use `WABATextMsgWithUserInfo`
   "sender": "+15551234567",
   "receiver": "+15551234568",
   "message_id": "wamid.HBgLMTY0NjcwNDM1OTUVAgARGBI1RjQyNUE3NEYxMzAzMzQ5MkEA",
-  "body": "Hi! Just checking in about my recent order.",
   "customer_details": {
     "codigo_cliente": "cod_12345" // TODO Ver con Kuebler mas campos
-  }
+  },
+  "body": "Hi! Just checking in about my recent order."
 }
 ```
