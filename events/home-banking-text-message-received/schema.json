@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HomeBankingTextMessageReceived",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "session_id": {
+      "type": "string"
+    },
+    "channel": {
+      "enum": ["mobile", "website"]
+    },
+    "body": {
+      "type": "string"
+    }
+  },
+  "required": ["uuid", "timestamp", "session_id", "channel", "body"]
+}

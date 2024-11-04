@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Send Text Message via Home Banking with User Info",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "session_id": {
+      "type": "string"
+    },
+    "channel": {
+      "enum": ["mobile", "website"]
+    },
+    "customer_details": {
+      "type": "object",
+      "properties": {
+        "codigo_cliente": {
+          "type": "string"
+        }
+      },
+      "required": ["codigo_cliente"]
+    },
+    "body": {
+      "type": "string"
+    }
+  },
+  "required": ["uuid", "timestamp", "session_id", "customer_details", "body"]
+}
