@@ -5,6 +5,10 @@ version: 0.0.1
 summary: |
   Command to send a message to the chatbot widget
 schemaPath: "schema.json"
+badges:
+  - content: Deprecated
+    backgroundColor: red
+    textColor: red
 ---
 # Send Website Widget Message Command
 
