@@ -20,6 +20,9 @@
       "type": "object",
       "$comment": "object schema TBD"
     },
+    "manage_by": {
+      "enum": ["ai-agent", "agent"]
+    },
     "log": {
       "type": "array",
       "items": {

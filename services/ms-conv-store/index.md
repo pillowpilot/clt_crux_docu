@@ -102,7 +102,7 @@ List of source id procedures by channel:
 
 * Active channel: Channel through which the system will send its messages **by default**. It's set during the construction of a new conversation.
 
-* State: `open` or `closed`.
+* Manage by: Enumeration describing which type of agent is currently handling the conversation, in other words, which agent is generating answers.
 
 ### Log (ordered by timestamp)
 
