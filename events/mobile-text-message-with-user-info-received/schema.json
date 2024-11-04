@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MobileTextMessageReceived",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "customer_details": {
+      "type": "object",
+      "properties": {
+        "codigo_cliente": {
+          "type": "string"
+        }
+      },
+      "required": ["codigo_cliente"]
+    },
+    "body": {
+      "type": "string"
+    }
+  },
+  "required": ["uuid", "timestamp", "customer_details", "body"]
+}
